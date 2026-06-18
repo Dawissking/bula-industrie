@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Building2 } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { projects } from "@/lib/data";
@@ -24,10 +25,14 @@ export default function ProjectsPreview() {
             <AnimatedSection key={project.id} delay={index * 0.15}>
               <div className="group card-premium h-full overflow-hidden rounded-sm border border-gray-200 bg-white shadow-sm">
                 <div className="relative h-40 sm:h-48 bg-gradient-to-br from-gray-800 to-gray-900">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Building2 size={40} className="text-white/20 sm:hidden" />
-                    <Building2 size={48} className="text-white/20 hidden sm:block" />
-                  </div>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                   <div className="absolute right-3 top-3 sm:right-4 sm:top-4">
                     <span className="inline-block rounded-sm bg-[#D4A017] px-2.5 py-1 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-bold text-[#0B0B0B]">
                       {project.sector}

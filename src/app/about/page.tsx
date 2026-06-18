@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Target, Eye } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionTitle from "@/components/shared/SectionTitle";
@@ -16,10 +17,10 @@ const timeline = [
 ];
 
 const team = [
-  { name: "Direction Générale", role: "Leadership stratégique" },
-  { name: "Direction Technique", role: "Innovation et production" },
-  { name: "Direction Commerciale", role: "Développement commercial" },
-  { name: "Direction RH", role: "Capital humain" },
+  { name: "Direction Générale", role: "Leadership stratégique", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" },
+  { name: "Direction Technique", role: "Innovation et production", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
+  { name: "Direction Commerciale", role: "Développement commercial", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" },
+  { name: "Direction RH", role: "Capital humain", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" },
 ];
 
 export default function AboutPage() {
@@ -73,7 +74,16 @@ export default function AboutPage() {
 
             <AnimatedSection direction="right">
               <div className="relative">
-                <div className="aspect-[4/3] rounded-sm bg-gradient-to-br from-gray-800 to-gray-900" />
+                <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+                  <Image
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+                    alt="Équipe Bula Industrie"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
                 <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 rounded-sm bg-[#D4A017] px-4 py-3 sm:px-6 sm:py-4 shadow-lg">
                   <p className="font-['Playfair_Display'] text-2xl sm:text-3xl font-bold text-[#0B0B0B]">
                     {companyInfo.founded}
@@ -216,7 +226,15 @@ export default function AboutPage() {
             {team.map((member, index) => (
               <AnimatedSection key={member.name} delay={index * 0.1}>
                 <div className="group text-center">
-                  <div className="mx-auto mb-3 sm:mb-4 aspect-square w-24 sm:w-32 overflow-hidden rounded-full bg-gradient-to-br from-gray-800 to-gray-900 transition-transform duration-300 group-hover:scale-105" />
+                  <div className="mx-auto mb-3 sm:mb-4 aspect-square w-24 sm:w-32 overflow-hidden rounded-full bg-gradient-to-br from-gray-800 to-gray-900 transition-transform duration-300 group-hover:scale-105 relative">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                      sizes="128px"
+                    />
+                  </div>
                   <h3 className="text-base sm:text-lg font-bold text-[#0B0B0B]">{member.name}</h3>
                   <p className="text-sm text-[#D4A017]">{member.role}</p>
                 </div>

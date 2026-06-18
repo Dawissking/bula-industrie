@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionTitle from "@/components/shared/SectionTitle";
@@ -84,11 +85,15 @@ export default function ActivitiesPage() {
                     </div>
 
                     <div className={`${isEven ? "" : "lg:order-1"}`}>
-                      <div className="relative aspect-square rounded-sm bg-gradient-to-br from-gray-800 to-gray-900">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <Icon size={80} className="text-white/10 sm:hidden" />
-                          <Icon size={120} className="text-white/10 hidden sm:block" />
-                        </div>
+                      <div className="relative aspect-square overflow-hidden rounded-sm">
+                        <Image
+                          src={sector.image}
+                          alt={sector.title}
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                       </div>
                     </div>
                   </div>

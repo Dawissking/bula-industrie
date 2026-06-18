@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Calendar, ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionTitle from "@/components/shared/SectionTitle";
@@ -72,6 +73,14 @@ export default function NewsPage() {
               <div className="group card-premium overflow-hidden rounded-sm border border-gray-200 shadow-sm">
                 <div className="grid gap-0 lg:grid-cols-2">
                   <div className="relative h-52 sm:h-64 bg-gradient-to-br from-gray-800 to-gray-900 lg:h-auto">
+                    <Image
+                      src={featuredArticle.image}
+                      alt={featuredArticle.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                     <div className="absolute right-3 top-3 sm:right-4 sm:top-4">
                       <span className="inline-block rounded-sm bg-[#D4A017] px-3 py-1 sm:px-4 sm:py-1.5 text-[10px] sm:text-xs font-bold text-[#0B0B0B]">
                         {featuredArticle.category}
@@ -113,6 +122,14 @@ export default function NewsPage() {
                 <AnimatedSection key={article.id} delay={index * 0.1}>
                   <div className="group card-premium h-full overflow-hidden rounded-sm border border-gray-200 bg-white shadow-sm">
                     <div className="relative h-40 sm:h-48 bg-gradient-to-br from-gray-800 to-gray-900">
+                      <Image
+                        src={article.image}
+                        alt={article.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                       <div className="absolute right-3 top-3 sm:right-4 sm:top-4">
                         <span className="inline-block rounded-sm bg-[#D4A017] px-2.5 py-1 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-bold text-[#0B0B0B]">
                           {article.category}

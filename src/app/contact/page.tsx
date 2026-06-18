@@ -250,17 +250,19 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Map Placeholder */}
+                {/* Google Maps - Bamako, Mali */}
                 <div className="mt-6 sm:mt-8 overflow-hidden rounded-sm border border-gray-200">
-                  <div className="flex h-40 sm:h-48 items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
-                    <div className="text-center">
-                      <MapPin size={28} className="mx-auto text-[#D4A017] sm:hidden" />
-                      <MapPin size={32} className="mx-auto text-[#D4A017] hidden sm:block" />
-                      <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm font-medium text-gray-500">
-                        Carte interactive
-                      </p>
-                    </div>
-                  </div>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122299.91348984793!2d-8.0477!3d12.6392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51d17b42fef071%3A0x4a3d3c5e1e3e3e3e!2sBamako%2C%20Mali!5e0!3m2!1sfr!2sml!4v1718000000000!5m2!1sfr!2sml"
+                    width="100%"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Localisation Bula Industrie - Bamako, Mali"
+                    className="w-full h-64 sm:h-72 md:h-80"
+                  />
                 </div>
               </AnimatedSection>
             </div>

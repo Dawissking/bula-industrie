@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Building2 } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionTitle from "@/components/shared/SectionTitle";
@@ -69,10 +70,14 @@ export default function ProjectsPage() {
               <AnimatedSection key={project.id} delay={index * 0.1}>
                 <div className="group card-premium h-full overflow-hidden rounded-sm border border-gray-200 bg-white shadow-sm">
                   <div className="relative h-44 sm:h-56 bg-gradient-to-br from-gray-800 to-gray-900">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Building2 size={48} className="text-white/15 sm:hidden" />
-                      <Building2 size={64} className="text-white/15 hidden sm:block" />
-                    </div>
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                     <div className="absolute right-3 top-3 sm:right-4 sm:top-4">
                       <span className="inline-block rounded-sm bg-[#D4A017] px-3 py-1 sm:px-4 sm:py-1.5 text-[10px] sm:text-xs font-bold text-[#0B0B0B]">
                         {project.sector}

@@ -29,6 +29,7 @@ export interface Sector {
   icon: LucideIcon;
   color: string;
   features: string[];
+  image: string;
 }
 
 export const sectors: Sector[] = [
@@ -44,6 +45,7 @@ export const sectors: Sector[] = [
       "Supply chain global",
       "Conseil en import-export",
     ],
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
   },
   {
     title: "Hydrocarbures",
@@ -57,6 +59,7 @@ export const sectors: Sector[] = [
       "Raffinage",
       "Énergie renouvelable",
     ],
+    image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=80",
   },
   {
     title: "Lubrifiants",
@@ -70,6 +73,7 @@ export const sectors: Sector[] = [
       "Graisses techniques",
       "Fluides hydrauliques",
     ],
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
   },
   {
     title: "Logistique",
@@ -83,6 +87,7 @@ export const sectors: Sector[] = [
       "Gestion de flotte",
       "Distribution nationale",
     ],
+    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80",
   },
   {
     title: "Agro-Business",
@@ -96,6 +101,7 @@ export const sectors: Sector[] = [
       "Commerce céréalier",
       "Agriculture durable",
     ],
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80",
   },
   {
     title: "Industrie",
@@ -109,6 +115,7 @@ export const sectors: Sector[] = [
       "Production industrielle",
       "Contrôle qualité",
     ],
+    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80",
   },
 ];
 
@@ -144,7 +151,7 @@ export const news = [
       "Un investissement majeur dans les infrastructures logistiques pour renforcer notre capacité de distribution en Afrique de l'Ouest.",
     date: "2026-06-10",
     category: "Infrastructure",
-    image: "/news-1.jpg",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
   },
   {
     id: 2,
@@ -153,7 +160,7 @@ export const news = [
       "Un accord de longue durée garantissant l'approvisionnement stable en produits pétroliers pour nos clients.",
     date: "2026-05-22",
     category: "Partenariat",
-    image: "/news-2.jpg",
+    image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=80",
   },
   {
     id: 3,
@@ -162,7 +169,7 @@ export const news = [
       "Une innovation dans nos produits de lubrification, 100% biodégradables et conformes aux normes environnementales internationales.",
     date: "2026-04-15",
     category: "Innovation",
-    image: "/news-3.jpg",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
   },
   {
     id: 4,
@@ -171,7 +178,7 @@ export const news = [
       "Une reconnaissance internationale de notre engagement envers la qualité et l'excellence opérationnelle dans tous nos secteurs.",
     date: "2026-03-08",
     category: "Certification",
-    image: "/news-4.jpg",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
   },
   {
     id: 5,
@@ -180,7 +187,7 @@ export const news = [
       "Notre initiative RSE vise à former la prochaine génération de professionnels industriels au Mali et en Afrique de l'Ouest.",
     date: "2026-02-20",
     category: "RSE",
-    image: "/news-5.jpg",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80",
   },
   {
     id: 6,
@@ -189,7 +196,7 @@ export const news = [
       "Un projet agricole d'envergure pour soutenir les communautés locales et promouvoir une agriculture durable et moderne.",
     date: "2026-01-12",
     category: "Agro-Business",
-    image: "/news-6.jpg",
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80",
   },
 ];
 
@@ -202,7 +209,7 @@ export const projects = [
     sector: "Hydrocarbures",
     status: "En cours",
     progress: 75,
-    image: "/project-1.jpg",
+    image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=80",
   },
   {
     id: 2,
@@ -212,7 +219,7 @@ export const projects = [
     sector: "Logistique",
     status: "En cours",
     progress: 60,
-    image: "/project-2.jpg",
+    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80",
   },
   {
     id: 3,
@@ -222,7 +229,7 @@ export const projects = [
     sector: "Agro-Business",
     status: "Planifié",
     progress: 25,
-    image: "/project-3.jpg",
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80",
   },
   {
     id: 4,
@@ -232,7 +239,7 @@ export const projects = [
     sector: "Lubrifiants",
     status: "En cours",
     progress: 45,
-    image: "/project-4.jpg",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
   },
 ];
 

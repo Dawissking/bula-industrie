@@ -2,18 +2,28 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronDown, ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[calc(100vh-52px)] sm:min-h-[calc(100vh-82px)] flex items-center justify-center overflow-hidden bg-black">
-      {/* Animated background */}
+      {/* Background Image */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-        <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-gold/5 rounded-full blur-[100px] sm:blur-[128px]" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-green/5 rounded-full blur-[100px] sm:blur-[128px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] bg-gold/3 rounded-full blur-[120px] sm:blur-[200px]" />
+        <Image
+          src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1920&q=80"
+          alt="Industrie pétrolière"
+          fill
+          className="object-cover opacity-30"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
       </div>
+
+      {/* Animated accent lights */}
+      <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-gold/5 rounded-full blur-[100px] sm:blur-[128px]" />
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-green/5 rounded-full blur-[100px] sm:blur-[128px]" />
 
       {/* Floating particles */}
       {[...Array(15)].map((_, i) => (
@@ -38,15 +48,6 @@ export default function Hero() {
           }}
         />
       ))}
-
-      {/* Grid pattern overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(212,160,23,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,160,23,0.3) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
-      />
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
